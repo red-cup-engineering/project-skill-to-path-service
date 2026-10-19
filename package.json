@@ -4,8 +4,7 @@
   "description": "Projects one skill record and its source script into the SKILL.md + scripts/ directory shape the Agent Skills harness reads. The only package in the skills split that writes to disk.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/red-cup-engineering/computer-inference-system-services-section.git",
-    "directory": "services/agent-services-section/services/skills-services-section/services/skill-projection-services-section/services/project-skill-to-path-service"
+    "url": "git+https://github.com/red-cup-engineering/project-skill-to-path-service.git"
   },
   "type": "module",
   "license": "MIT",
