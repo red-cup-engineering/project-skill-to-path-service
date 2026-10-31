@@ -22,7 +22,7 @@ Projects one skill record and its source script into the directory shape the Age
 
 This service imports `renderAgentSkillMarkdown` from `@red-cup-engineering/skills-services-section` rather than carrying its own YAML quoter. The legacy `project-a-skill.js` hand-rolled a `yamlScalar` function; that duplication is exactly what this split removes.
 
-One consequence is worth stating plainly: the shared renderer routes the body through semantic-linefeed normalization (one sentence per line). The legacy hand-rolled `skillMarkdown()` preserved the source's raw line breaks verbatim. Frontmatter (`name`, `description`) is unaffected either way, since the normalizer passes frontmatter lines through untouched — but a body whose source prose is not already written one-sentence-per-line will render with different line breaks than the legacy projector produced. That is a real, documented behavioural difference from reusing the house renderer as instructed, not a defect in this projection.
+One consequence is worth stating plainly: the shared renderer routes the body through semantic-linefeed normalization (one sentence per line). The legacy hand-rolled `skillMarkdown()` preserved the source's raw line breaks verbatim. Frontmatter (`name`, `description`) is unaffected either way, since the normalizer passes frontmatter lines through untouched — but a body whose source prose is not already written one-sentence-per-line will render with different line breaks than the legacy projector produced. That is a real, documented behavioural difference from reusing the Group renderer as instructed, not a defect in this projection.
 
 ```js
 import { projectSkillToPath } from "@red-cup-engineering/project-skill-to-path-service";
